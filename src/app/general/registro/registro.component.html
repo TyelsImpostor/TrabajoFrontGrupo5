@@ -1,0 +1,21 @@
+<form class="form-signin">
+
+    <h1 class="h3 mb-3 font-weight-normal">Registrarse</h1>
+    <label for="inputNombre" class="sr-only">Nombre</label>
+    <input [(ngModel)]="nombre" name="nombre" type="text" id="inputNombre" class="form-control" placeholder="Nombre">
+    <p style="color:red;">{{mensaje_nombre}}</p>
+    <div class="checkbox mb-3">
+        <label for="inputEmail" class="sr-only">Correo Electronico</label>
+        <input [(ngModel)]="email" name="email" type="email" id="inputEmail" class="form-control" placeholder="nombre@dominio.algo">
+        <p style="color:red;">{{mensaje_email}}</p>
+        <label for="inputNumber" class="sr-only">Telefono</label>
+        <input [(ngModel)]="numero" name="numero" type="text" id="inputNumber" class="form-control" placeholder="Telefono">
+        <p style="color:red;">{{mensaje_numero}}</p>
+
+    </div>
+    <button (click)="insertar()" class="btn btn-lg btn-primary btn-block " type="submit">Registrarse</button>
+</form>
+
+<p> {{mensaje_nombreF}} </p>
+<p> {{mensaje_emailF}} </p>
+<p> {{mensaje_numeroF}} </p>

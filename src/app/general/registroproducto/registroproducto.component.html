@@ -1,0 +1,44 @@
+<form class="form-signin" (submit)="agregar()">
+    <h1 class="h3 mb-3 font-weight-normal">Registra un Producto</h1>
+    <label for="inputNombre" class="sr-only">Nombre</label>
+    <input [(ngModel)]="nombre" name="nombre" type="text" id="nombre" class="form-control" placeholder="Nombre">
+    <p style="color:red;">{{mensaje_nombre}}</p>
+
+    <label for="inputCodigo" class="sr-only">Codigo</label>
+    <input [(ngModel)]="codigo" name="codigo" type="text" id="codigo" class="form-control" placeholder="Codigo">
+    <p style="color:red;">{{mensaje_codigo}}</p>
+
+    <label for="inputCodigo" class="sr-only">Precio</label>
+    <input [(ngModel)]="precio" name="precio" type="number" id="precio" class="form-control" placeholder="Precio">
+    <p style="color:red;">{{mensaje_precio}}</p>
+
+    <label for="inputCodigo" class="sr-only">Stock</label>
+    <input [(ngModel)]="stock" name="stock" type="text" id="stock" class="form-control" placeholder="Stock">
+    <p style="color:red;">{{mensaje_stock}}</p>
+
+    <button class="btn btn-lg btn-primary btn-block " type="submit">Registra un producto!</button>
+</form>
+
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Codigo</th>
+            <th>Precio</th>
+            <th>Stock</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let producto of lista_productos">
+            <td>{{producto.nombre}}</td>
+            <td>{{producto.codigo}}</td>
+            <td>{{producto.precio}}</td>
+            <td>{{producto.stock}}</td>
+        </tr>
+    </tbody>
+</table>
+<!--
+
+
+-->
